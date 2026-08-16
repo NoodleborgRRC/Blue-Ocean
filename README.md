@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/31118949/README.md)
 # Blue Ocean
 
 A roguelike strategy game simulating company founding and scaling from Pre-Seed to Exit, across

@@ -1,0 +1,12 @@
+{
+  "name": "blueocean",
+  "private": true,
+  "scripts": {
+    "build:harness": "node build-tools/build_harness.mjs src/blueocean-core.jsx build-tools/harness-build.jsx && esbuild build-tools/harness-entry.jsx --bundle --loader:.jsx=jsx --jsx=transform --outfile=tests/build/harness.cjs --format=iife --global-name=H --alias:react=./build-tools/stubs/react.js --alias:react-dom=./build-tools/stubs/react-dom.js --target=es2019",
+    "pretest": "npm run build:harness",
+    "test": "for f in tests/*_test.cjs; do node \"$f\" || exit 1; done"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.0"
+  }
+}
