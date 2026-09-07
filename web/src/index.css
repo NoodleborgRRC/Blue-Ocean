@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Tailwind v4 discovers its content automatically from this file's project, which does NOT
+   include the repo root where blueocean-core.jsx lives. Without this @source line, every one of
+   the ~1,100 Tailwind classes in the core file is scanned-out and the game renders unstyled. */
+@source "../../blueocean-core.jsx";
+
+html, body, #root { height: 100%; }
+body { margin: 0; }
